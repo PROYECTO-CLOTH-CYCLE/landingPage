@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Roboto:wght@300;400;500;700;900&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300;400;500;700;900&display=swap');
+:root{
+    --button:#8CB560;
+	--primary-color: #3a3939;
+	--background-color: #ffffff;
+	--dark-color: #f4ecec;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ********************************** */
+/*             UTILIDADES             */
+/* ********************************** */
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.heading-1 {
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+}
+
+/* ********************************** */
+/*               HEADER               */
+/* ********************************** */
+.container-hero {
+	background-color: var(--background-color);
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.customer-support {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.customer-support i {
+	font-size: 3.3rem;
+}
+
+.content-customer-support {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+}
+
+.container-logo i {
+	font-size: 3rem;
+}
+
+.container-logo h1 a {
+	text-decoration: none;
+	color: #000;
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.container-user {
+	display: flex;
+	gap: 1rem;
+	cursor: pointer;
+}
+
+.container-user .fa-user {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-right: 2.5rem;
+	border-right: 1px solid #e2e2e2;
+}
+
+.container-user .fa-basket-shopping {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-left: 1rem;
+}
+
+.content-shopping-cart {
+	display: flex;
+	flex-direction: column;
+}
+
+/* ************* NAVBAR ************* */
+.container-navbar {
+	background-color: var(--primary-color);
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+}
+
+.navbar .fa-bars {
+	display: none;
+}
+
+.menu {
+	display: flex;
+	gap: 2rem;
+}
+
+.menu li {
+	list-style: none;
+}
+
+.menu a {
+	text-decoration: none;
+	font-size: 1.3rem;
+	color: var(--dark-color);
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.menu a::after {
+	content: '';
+	width: 1.5rem;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+	opacity: 1;
+}
+
+.menu a:hover {
+	color: #fff;
+}
+
+
+.user-buttons {
+	display: flex;
+	gap: 1rem;
+}
+
+.user-buttons a {
+	border: 2px solid var(--primary-color);
+	background-color: var(--primary-color);
+	color: #fff;
+	font-size: 1.3rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 0.8rem 1.5rem;
+	cursor: pointer;
+	border-radius: 0.5rem;
+	text-decoration: none;
+}
+
+.user-buttons a:hover {
+	opacity: 0.8;
+	border-color: #fff;
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* ********************************** */
+/*               BANNER               */
+/* ********************************** */
+.banner {
+	background-image: linear-gradient(100deg, #000000, #00000020),
+		url('imagenes/fondo.png');
+	height: 60rem;
+	background-size: cover;
+	background-position: center;
+}
+
+.content-banner {
+	max-width: 90rem;
+	margin: 0 auto;
+	padding: 25rem 0;
+}
+
+.content-banner p {
+	color: var(--background-color);
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	font-weight: 500;
+}
+
+.content-banner h2 {
+	color: #fff;
+	font-size: 3.5rem;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+.content-banner a {
+	margin-top: 2rem;
+	text-decoration: none;
+	color: #fff;
+	background-color: var(--primary-color);
+	display: inline-block;
+	padding: 1rem 3rem;
+	text-transform: uppercase;
+	border-radius: 3rem;
+}
+
+/* ********************************** */
+/*            MAIN CONTENT            */
+/* ********************************** */
+.main-content {
+	background-color: var(--background-color);
+}
+
+/* ********************************** */
+/*              FEATURES              */
+/* ********************************** */
+.container-features {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 3rem;
+	padding: 3rem 0;
+}
+
+.card-feature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.5rem;
+
+	background-color: #7c7777;
+	border-radius: 1rem;
+	padding: 1.5rem 0;
+}
+
+.card-feature i {
+	font-size: 2.7rem;
+	color: var(--primary-color);
+}
+
+.feature-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.feature-content span {
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: var(--dark-color);
+}
+
+.feature-content p {
+	color: #494545;
+	font-weight: 500;
+}
+
+.About{
+    padding: 2rem 7%;
+    background: #f5f5f5;
+    background-image: url(images/Design\ Elements.png);
+    background-position: 100% 100%;
+}
+
+.About h1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+}
+
+
+.main-about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.inner-about{
+    flex: 1 1 45rem;
+}
+
+
+.right-content-about h2{
+    font-size: 36px;
+    color: #333;
+    padding: 2rem 0;
+}
+.right-content-about h3{
+    color: #ffffff;
+    font-size: 36px;
+    font-family: 'Dancing Script', cursive;
+}
+.right-content-about p{
+    color: #333;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+}
+.right-content-about button{
+    padding: 1.5rem 2.5rem;
+    font-size: 1.5rem;
+    color: #e5e4e2;
+    border: 1px solid var(--primary-color);
+    transition: 0.5s;
+    background-color: var(--primary-color);
+}
+.right-content-about button:hover{
+    cursor: pointer;
+    background: var(--primary-color);
+    border-radius: 10px;
+    color: #e5e4e2;
+}
+
+.inner-about .about-img{
+    padding: 5rem;
+}
+.inner-about .about-img img{
+    width: 100%;
+}
+
+
+#history{
+    padding-top: 2rem !important;
+}
+.history-para{
+    text-align: left;
+}
+.history-para h2{
+    color: #faf7f0;
+    font-size: 30px;
+    font-family: 'dancing script', cursive;
+}
+
+.About{
+    padding: 2rem 7%;
+    background: #a19f9f;
+    background-image: url(images/Design\ Elements.png);
+    background-position: 100% 100%;
+}
+
+.About h1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+}
+
+
+.main-home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.inner-home{
+    flex: 1 1 45rem;
+	padding: 5rem;
+}
+
+
+.left-content-home h2{
+    font-size: 36px;
+    color: #333;
+    padding: 2rem 0;
+}
+.left-content-home h3{
+    color: #ffffff;
+    font-size: 36px;
+    font-family: 'Dancing Script', cursive;
+}
+.left-content-home p{
+    color: #333;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+}
+.left-content-home button{
+    padding: 1.5rem 2.5rem;
+    font-size: 1.5rem;
+    color: #e5e4e2;
+    border: 1px solid var(--primary-color);
+    transition: 0.5s;
+    background-color: var(--primary-color);
+}
+.left-content-home button:hover{
+    cursor: pointer;
+    background: var(--primary-color);
+    border-radius: 10px;
+    color: #e5e4e2;
+}
+
+.inner-home .home-img{
+    padding: 5rem;
+}
+.inner-home .home-img img{
+    width: 100%;
+}
+
+
+#nuestros-programas{
+    background-color: rgb(73, 72, 72);
+    color: white;
+    text-align: center;
+}
+
+
+#nuestros-programas .programas{
+	display: flex;
+	justify-content: center;
+}
+
+#nuestros-programas p{
+	display: block;
+	margin-bottom: 20px;
+	font-size: 1.2em;
+}
+#nuestros-programas .container{
+    padding: 100px 50px;
+}
+#nuestros-programas h2{
+    margin-top: 0;
+    font-size: 3.8em;
+}
+
+#nuestros-programas h3{
+	margin-top: 8;
+	font-size: 1.5em; 
+	line-height: 1.4;
+}
+
+#nuestros-programas .carta{
+	padding: 100px;
+	background-size: 100% 300px;
+	background-repeat: no-repeat;
+	background-position-y: 0;
+	background-color: rgba(50, 50, 50, 1);
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.carta:first-child{
+	background-image: linear-gradient(
+		0deg,
+		rgba(0,0,0,0.5),
+		rgba(0,0,0,0.5)
+	)
+	,url("imagenes/Nosotrseconomiacircular.jpg");
+
+}
+.carta button{
+    padding: 1.5rem 2.5rem;
+    font-size: 1.5rem;
+    color: #e5e4e2;
+    border: 1px solid var(--primary-color);
+    transition: 0.5s;
+    background-color: var(--primary-color);
+}
+.carta button:hover{
+    cursor: pointer;
+    background: var(--primary-color);
+    border-radius: 10px;
+    color: #e5e4e2;
+}
+
+.carta:nth-child(2){
+	background-image: linear-gradient(
+		0deg,
+		rgba(0,0,0,0.5),
+		rgba(0,0,0,0.5)
+	)
+	,url("imagenes/tiendasderopa.jpg");
+}
+
+.carta:nth-child(3){
+	background-image: linear-gradient(
+		0deg,
+		rgba(0,0,0,0.5),
+		rgba(0,0,0,0.5)
+	)
+	,url("imagenes/comunidad-Mark.webp");
+
+}
